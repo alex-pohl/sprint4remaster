@@ -4,6 +4,8 @@ const tasks = require('./routes/tasks')
 
 
 
+//Middleware -> 
+app.use(express.json());
 
 //Example route
 app.get('/',(req,res)=>{
@@ -12,12 +14,6 @@ app.get('/',(req,res)=>{
 
 app.use('/api/v1/tasks', tasks)
 
-//routes
-// app.get('/api/v1/tasks')         - get all tasks
-// app.post('/api/v1/tasks')        - create a new task
-// app.get('/api/v1/tasks:id')      - get a single task
-// app.patch('/api/v1/tasks:id')    - modify a task
-// app.delete('/api/v1/tasks:id')   - delete a task
 
 
 const port = 5000;

@@ -7,11 +7,12 @@ const getAllTasks = (req,res)=>{
 }
 
 const addNewTask = (req, res)=>{
-    res.send('add a new task')
+    console.log(req.body)
+    res.json(req.body)
 }
 
 const getOneTask = (req, res) =>{
-    res.send('one specific task')
+    res.json({id:req.params.id})
 }
 
 const editTask = (req, res)=>{
